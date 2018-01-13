@@ -130,7 +130,7 @@ sysfsutils
 system-config-printer
 systemd-sysvcompat
 tar
-termite
+rxvt-unicode
 texinfo
 texlive-core
 thunar
