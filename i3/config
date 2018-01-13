@@ -14,7 +14,7 @@ floating_modifier $mod
 
 exec --no-startup-id xcompmgr
 
-set $term termite
+set $term urxvt
 set $browser firefox
 set $mail evolution
 set $screencast  ffmpeg -y -f x11grab -video_size 1280x800 -i :0.0 -f alsa -i default -c:v ffvhuff -r 30 -c:a flac output.mkv
