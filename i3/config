@@ -30,31 +30,11 @@ exec_always /home/zeb/.config/polybar/launch.sh
 
 #exec_always xinput --disable 14
 
-exec_always --no-startup-id feh --randomize --bg-scale /home/zeb/Pictures/background/*
+exec_always --no-startup-id wal -a 0.8 -i ~/Pictures/Background/
 
-
-set $bg-color 			#f3f3f3
-set $border-color		#643e02
-set $inactive-bg-color		#f3f3f3
-set $inactive-border-color	#1f1f1f
-set $text-color			#ffffff
-set $urgent-bg-color		#fafafa
-set $urgent-border-color	#ff1d00
-
-#bar {
-	#This status command requires bumblebee-status. You must change it to your desired settings!
-	#https://github.com/tobi-wan-kenobi/bumblebee-status
-	#font pango:Anonymous Pro Minus 10
-	#position top
-	#status_command i3status
-	#status_command polybar example
-	#status_command /home/zeb/Packages/bumblebee-status/bumblebee-status -m cpu memory battery datetime -p datetime.format="%a, %b %d, %Y at %I:%M %p" -t green	
-#}
-
-client.focused		#ff0000			$border-color		$text-color		#fba922
-client.unfocused	$inactive-bg-color	$inactive-border-color	$text-color		#fba922
-client.focused_inactive	$inactive-bg-color	$inactive-border-color	$text-color		#fba922
-client.urgent		$bg-color		$urgent-border-color	$text-color		#fba922
+################################################
+# Keybindings
+################################################
 
 bindsym $mod+Return 		exec $term
 bindsym $mod+Shift+Return 	exec $term -e tmux
@@ -80,7 +60,9 @@ bindsym $mod+Tab		workspace back_and_forth
 #bindsym $mod+Shift+XF86Forward	
 #END
 
+################
 #Letter Keys
+################
 
 bindsym $mod+q		kill
 bindsym $mod+Shift+q	kill
@@ -249,7 +231,6 @@ for_window [class="qbittorrent"] move workspace $ws8
 
 assign [class="Steam"] $ws10
 assign [class="stremio"] $ws6
-assign [class="qutebrowser"]$ws2
 assign [class="Eclipse" ] $ws4
 assign [class="libreoffice"] $ws7
 assign [class="gimp"] $ws5
@@ -305,7 +286,7 @@ bindsym XF86Mail		exec $term -e mutt
 #bindsym $mod+XF86Mail		exec $mail
 #bindsym XF86MyComputer		exec
 #bindsym $mod+XF86MyComputer	exec
-#bindsym XF86HomePage		exec --no-startup-id $browser --new-window lukesmith.xyz
+#bindsym XF86HomePage		exec --no-startup-id $browser 
 bindsym $mod+XF86HomePage	exec --no-startup-id $browser 
 bindsym $mod+XF86WWW		exec --no-startup-id $browser
 
